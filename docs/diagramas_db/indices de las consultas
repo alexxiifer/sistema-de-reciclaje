@@ -1,0 +1,14 @@
+-- Índices para optimizar consultas
+CREATE INDEX idx_usuario_correo ON Usuario (correo);
+
+CREATE INDEX idx_reciclaje_fecha_usuario ON Reciclaje (fecha_reciclaje, id_usuario);
+
+CREATE INDEX idx_puntos_ubicacion ON Puntos_Reciclaje (ubicacion);
+
+CREATE INDEX idx_canje_usuario_fecha ON Canje (id_usuario, fecha_canje);
+
+CREATE INDEX idx_recompensa_nombre ON Recompensa (nombre);
+
+CREATE INDEX idx_puntaje_usuario ON Puntaje (id_usuario);
+
+CREATE INDEX idx_lista_material_reciclaje ON Lista_Material (id_reciclaje);
